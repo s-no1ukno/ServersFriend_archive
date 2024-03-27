@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import FirebaseAuth
 
 class LoginViewVM: ObservableObject {
   @Published var email = ""
@@ -30,8 +31,10 @@ class LoginViewVM: ObservableObject {
     if errorMsg.count >= 1 {
       errorMsg = ""
     }
+    
+    // try login
+    Auth.auth().signIn(withEmail: email, password: password)
     print("called LOGIN:: ", email, password)
-    // register user
   }
 }
 
