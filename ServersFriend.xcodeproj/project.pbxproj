@@ -19,6 +19,11 @@
 		376896C22BB3D0EB00F7CF66 /* MainViewVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 376896C12BB3D0EB00F7CF66 /* MainViewVM.swift */; };
 		376896C42BB3D0F800F7CF66 /* LoginViewVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 376896C32BB3D0F800F7CF66 /* LoginViewVM.swift */; };
 		376896C62BB3D15200F7CF66 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 376896C52BB3D15200F7CF66 /* User.swift */; };
+		376896C82BB3D3DC00F7CF66 /* Header.swift in Sources */ = {isa = PBXBuildFile; fileRef = 376896C72BB3D3DC00F7CF66 /* Header.swift */; };
+		376896CB2BB3DB1300F7CF66 /* TLButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 376896CA2BB3DB1300F7CF66 /* TLButton.swift */; };
+		376896CE2BB3E5F500F7CF66 /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 376896CD2BB3E5F500F7CF66 /* Utils.swift */; };
+		376896D02BB3F4CD00F7CF66 /* Database.swift in Sources */ = {isa = PBXBuildFile; fileRef = 376896CF2BB3F4CD00F7CF66 /* Database.swift */; };
+		376896D22BB3F6BA00F7CF66 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 376896D12BB3F6BA00F7CF66 /* Extensions.swift */; };
 		376FCF2D2B9AA54A00202087 /* ServersFriendApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 376FCF2C2B9AA54A00202087 /* ServersFriendApp.swift */; };
 		376FCF2F2B9AA54A00202087 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 376FCF2E2B9AA54A00202087 /* MainView.swift */; };
 		376FCF312B9AA54C00202087 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 376FCF302B9AA54C00202087 /* Assets.xcassets */; };
@@ -54,6 +59,11 @@
 		376896C12BB3D0EB00F7CF66 /* MainViewVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewVM.swift; sourceTree = "<group>"; };
 		376896C32BB3D0F800F7CF66 /* LoginViewVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewVM.swift; sourceTree = "<group>"; };
 		376896C52BB3D15200F7CF66 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		376896C72BB3D3DC00F7CF66 /* Header.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Header.swift; sourceTree = "<group>"; };
+		376896CA2BB3DB1300F7CF66 /* TLButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TLButton.swift; sourceTree = "<group>"; };
+		376896CD2BB3E5F500F7CF66 /* Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
+		376896CF2BB3F4CD00F7CF66 /* Database.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Database.swift; sourceTree = "<group>"; };
+		376896D12BB3F6BA00F7CF66 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		376FCF292B9AA54A00202087 /* ServersFriend.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ServersFriend.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		376FCF2C2B9AA54A00202087 /* ServersFriendApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServersFriendApp.swift; sourceTree = "<group>"; };
 		376FCF2E2B9AA54A00202087 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
@@ -121,6 +131,7 @@
 			children = (
 				376896AE2BB3CA1300F7CF66 /* GoogleService-Info.plist */,
 				376FCF2C2B9AA54A00202087 /* ServersFriendApp.swift */,
+				376896D12BB3F6BA00F7CF66 /* Extensions.swift */,
 			);
 			path = Other;
 			sourceTree = "<group>";
@@ -131,6 +142,24 @@
 				376896C52BB3D15200F7CF66 /* User.swift */,
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		376896C92BB3D3FF00F7CF66 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				376896C72BB3D3DC00F7CF66 /* Header.swift */,
+				376896CA2BB3DB1300F7CF66 /* TLButton.swift */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
+		376896CC2BB3E5E600F7CF66 /* lib */ = {
+			isa = PBXGroup;
+			children = (
+				376896CD2BB3E5F500F7CF66 /* Utils.swift */,
+				376896CF2BB3F4CD00F7CF66 /* Database.swift */,
+			);
+			path = lib;
 			sourceTree = "<group>";
 		};
 		376FCF202B9AA54A00202087 = {
@@ -156,6 +185,8 @@
 		376FCF2B2B9AA54A00202087 /* ServersFriend */ = {
 			isa = PBXGroup;
 			children = (
+				376896CC2BB3E5E600F7CF66 /* lib */,
+				376896C92BB3D3FF00F7CF66 /* Components */,
 				375FEA7A2BB3C6A900A8FD8A /* Other */,
 				375FEA7B2BB3C6B800A8FD8A /* Models */,
 				375FEA782BB3C69700A8FD8A /* ViewModels */,
@@ -336,10 +367,15 @@
 				376FCF2F2B9AA54A00202087 /* MainView.swift in Sources */,
 				376896C42BB3D0F800F7CF66 /* LoginViewVM.swift in Sources */,
 				376896BC2BB3CEC600F7CF66 /* LoginView.swift in Sources */,
+				376896CB2BB3DB1300F7CF66 /* TLButton.swift in Sources */,
+				376896C82BB3D3DC00F7CF66 /* Header.swift in Sources */,
 				376896C62BB3D15200F7CF66 /* User.swift in Sources */,
 				376896BE2BB3CF0D00F7CF66 /* ServerOverviewView.swift in Sources */,
 				376896C22BB3D0EB00F7CF66 /* MainViewVM.swift in Sources */,
 				376FCF2D2B9AA54A00202087 /* ServersFriendApp.swift in Sources */,
+				376896D02BB3F4CD00F7CF66 /* Database.swift in Sources */,
+				376896CE2BB3E5F500F7CF66 /* Utils.swift in Sources */,
+				376896D22BB3F6BA00F7CF66 /* Extensions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

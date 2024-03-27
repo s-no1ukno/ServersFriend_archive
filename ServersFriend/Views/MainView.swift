@@ -8,13 +8,17 @@
 import SwiftUI
 
 struct MainView: View {
-    var body: some View {
-      Text("Hello World")
-      
-      // create a login view
-      
-      // create a register view
+  @StateObject var viewModel = MainViewVM()
+  
+  var body: some View {
+    VStack {
+      if viewModel.isSignedIn, !viewModel.currentUserID.isEmpty {
+        ServerOverviewView()
+      } else {
+        LoginView()
+      }
     }
+  }
 }
 
 #Preview {
