@@ -13,10 +13,25 @@ struct MainView: View {
   var body: some View {
     VStack {
       if viewModel.isSignedIn, !viewModel.currentUserID.isEmpty {
-        ServerOverviewView()
+        accountView
       } else {
         LoginView()
       }
+    }
+  }
+  
+  @ViewBuilder
+  var accountView: some View {
+    TabView {
+      ServerOverviewView()
+        .tabItem {
+          Label("Home", systemImage: "house")
+        }
+      ProfileView()
+        .tabItem {
+          Label("Profile", systemImage: "person.circle")
+        }
+      
     }
   }
 }
