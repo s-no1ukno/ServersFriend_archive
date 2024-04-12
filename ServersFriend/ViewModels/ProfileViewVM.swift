@@ -11,7 +11,6 @@ import FirebaseFirestore
 
 class ProfileViewVM: ObservableObject {
   @Published var user: User? = nil
-  @Published var showingNewShiftTypeView = false
   
   init() {}
   

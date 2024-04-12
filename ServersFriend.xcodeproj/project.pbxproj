@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		37287CE02BC8FCED003AC41C /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37287CDF2BC8FCED003AC41C /* SettingsView.swift */; };
+		37287CE22BC8FD40003AC41C /* SettingsViewVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37287CE12BC8FD40003AC41C /* SettingsViewVM.swift */; };
 		376896AF2BB3CA1300F7CF66 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 376896AE2BB3CA1300F7CF66 /* GoogleService-Info.plist */; };
 		376896B22BB3CB6900F7CF66 /* FirebaseAnalytics in Frameworks */ = {isa = PBXBuildFile; productRef = 376896B12BB3CB6900F7CF66 /* FirebaseAnalytics */; };
 		376896B42BB3CB6900F7CF66 /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = 376896B32BB3CB6900F7CF66 /* FirebaseAuth */; };
@@ -61,6 +63,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		37287CDF2BC8FCED003AC41C /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
+		37287CE12BC8FD40003AC41C /* SettingsViewVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewVM.swift; sourceTree = "<group>"; };
 		376896AE2BB3CA1300F7CF66 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		376896B92BB3CEAA00F7CF66 /* RegisterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterView.swift; sourceTree = "<group>"; };
 		376896BB2BB3CEC600F7CF66 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
@@ -135,6 +139,7 @@
 				376896D52BB40C9A00F7CF66 /* NewTipEntryView.swift */,
 				376896D72BB417C300F7CF66 /* ProfileView.swift */,
 				376896E12BB5E15300F7CF66 /* NewShiftTypeView.swift */,
+				37287CDF2BC8FCED003AC41C /* SettingsView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -147,6 +152,7 @@
 				376896C32BB3D0F800F7CF66 /* LoginViewVM.swift */,
 				376896D92BB4B7A600F7CF66 /* ProfileViewVM.swift */,
 				376896E32BB5E64200F7CF66 /* NewShiftTypeViewVM.swift */,
+				37287CE12BC8FD40003AC41C /* SettingsViewVM.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -406,7 +412,9 @@
 				376896C82BB3D3DC00F7CF66 /* Header.swift in Sources */,
 				376896D82BB417C300F7CF66 /* ProfileView.swift in Sources */,
 				376896C62BB3D15200F7CF66 /* User.swift in Sources */,
+				37287CE22BC8FD40003AC41C /* SettingsViewVM.swift in Sources */,
 				376896BE2BB3CF0D00F7CF66 /* ServerOverviewView.swift in Sources */,
+				37287CE02BC8FCED003AC41C /* SettingsView.swift in Sources */,
 				376896E42BB5E64200F7CF66 /* NewShiftTypeViewVM.swift in Sources */,
 				376896C22BB3D0EB00F7CF66 /* MainViewVM.swift in Sources */,
 				376FCF2D2B9AA54A00202087 /* ServersFriendApp.swift in Sources */,

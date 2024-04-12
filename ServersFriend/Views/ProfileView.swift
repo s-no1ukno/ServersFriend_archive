@@ -9,16 +9,20 @@ import SwiftUI
 
 struct ProfileView: View {
   @StateObject var viewModel = ProfileViewVM()
+  @State var currentUserID: String
+  
+  init(userID: String) {
+    self.currentUserID = userID
+  }
   
   var body: some View {
     NavigationView {
       VStack {
         if let user = viewModel.user {
           profile(user: user)
-          settings()
+          SettingsView(userID: currentUserID)
         } else {
           Text("Loading user info...")
-          settings()
         }
       }
       .navigationTitle("Profile")
@@ -69,24 +73,8 @@ struct ProfileView: View {
     .padding()
     Spacer()
   }
-  
-  @ViewBuilder
-  func settings() -> some View {
-    Text("Your shift types:")
-    // list of shifts
-    
-    
-    // add shift button
-    Button("New Shift Type") {
-      viewModel.showingNewShiftTypeView = true
-    }
-    .padding(.top, 50)
-    .sheet(isPresented: $viewModel.showingNewShiftTypeView) {
-      NewShiftTypeView(newShiftTypePresented: $viewModel.showingNewShiftTypeView)
-    }
-  }
 }
 
 #Preview {
-    ProfileView()
+  ProfileView(userID: "io741v5yxYPiRveSiqfnGdjKch82")
 }
