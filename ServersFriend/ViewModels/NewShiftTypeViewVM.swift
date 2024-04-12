@@ -1,0 +1,72 @@
+//
+//  NewShiftTypeViewVM.swift
+//  ServersFriend
+//
+//  Created by Jordan Snow on 3/28/24.
+//
+
+import Foundation
+import FirebaseAuth
+import FirebaseFirestore
+
+class NewShiftTypeViewVM: ObservableObject {
+  @Published var shiftType = ""
+  @Published var decimalString = ""
+  @Published var hourlyWage = 0.0
+  @Published var errorMsg = ""
+  
+  func createNewShiftType() -> Void {
+    // get current userID
+    guard let currentUserID = Auth.auth().currentUser?.uid else {
+      return
+    }
+    guard canSave else {
+      return
+    }
+    hourlyWage = Double(decimalString) ?? 0.00
+    
+    // Create new model
+    let newID = UUID().uuidString
+    let newShift = Shift(
+      id: newID,
+      typeOfShift: shiftType,
+      hourlyWage: hourlyWage
+    )
+    
+    let db = Firestore.firestore()
+    db.collection("users")
+      .document(currentUserID)
+      .collection("shifts")
+      .document(newID)
+      .setData(newShift.asDictionary())
+    
+    if !errorMsg.isEmpty {
+      errorMsg = ""
+    }
+  }
+  
+  
+  
+  var canSave: Bool {
+    // validation for saving here
+    // check that shiftType is not empty
+    guard !shiftType.trimmingCharacters(in: .whitespaces).isEmpty else {
+      errorMsg = "Please add a name for your shift."
+      return false
+    }
+    
+    // check that decimalString is not empty
+    guard !decimalString.trimmingCharacters(in: .whitespaces).isEmpty else {
+      errorMsg = "Please add an hourly wage."
+      return false
+    }
+
+    // check that decimal string is a valid double
+    guard Double(decimalString)?.isNaN == false else {
+      errorMsg = "Fucked up double"
+      return false
+    }
+    
+    return true
+  }
+}

@@ -8,13 +8,15 @@
 import Foundation
 import FirebaseFirestore
 
-struct Shift: Codable {
+struct Shift: Codable, Identifiable {
   let id: String
-  let hourlyWage: Double
   let typeOfShift: String
-  let tipIn: Bool
-  let tipOut: Bool
-  let timeIn: TimeInterval
-  let timeOut: TimeInterval
-  let employer: DocumentReference
+  let hourlyWage: Double
+
+  // TODO: IMPLEMENT LATER
+  //  let tipIn: Bool
+  //  let tipOut: Bool
+  //  let timeIn: Date?
+  //  let timeOut: Date?
+  //  let employer: DocumentReference?
 }
