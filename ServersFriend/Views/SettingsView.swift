@@ -38,6 +38,12 @@ struct SettingsView: View {
           Spacer()
           Text(String(item.hourlyWage))
         }
+        .swipeActions {
+          Button("Delete") {
+            print("delete item here")
+          }
+          .tint(.red)
+        }
       }
       .listStyle(PlainListStyle())
       
