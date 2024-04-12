@@ -27,38 +27,63 @@ struct SettingsView: View {
 
   }
   
+  func formatTipText(bool: Bool) -> Text {
+    if bool == false {
+      return Text("No").foregroundColor(.red)
+    } else {
+      return Text("Yes").foregroundColor(.green)
+    }
+  }
+  
   var body: some View {
     
     VStack {
       if items.isEmpty {
         Text("Add a new shift to start adding tips!")
       } else {
-        Text("Your shift types:")
-        // list of shifts
-        List(items) { item in
-          HStack {
-            Text(item.nameOfShift)
-              .bold()
-            Spacer()
-            Text(String(format: "$ %.2f", item.hourlyWage))
-            
-            VStack {
-              Text("Tracking Tip In? : \(item.tipIn)")
-              Text("Tracking Tip Out? : \(item.tipOut)")
+        List {
+          ScrollView {
+            Section {
+              ForEach(items) { item in
+                VStack {
+                  HStack {
+                    Text(item.nameOfShift)
+                      .bold()
+                    Spacer()
+                    Text(String(format: "$ %.2f per hour", item.hourlyWage))
+                      .bold()
+                  }
+                  .padding(.top, 10)
+                  .padding(.bottom, 10)
+                  HStack {
+                    VStack(alignment: .leading) {
+                      Text("Tracking Tip In? \(formatTipText(bool: item.tipIn))")
+                      Text("Tracking Tip Out? \(formatTipText(bool: item.tipOut))")
+                    }
+                    .font(.caption)
+                    .bold()
+                    
+                    Spacer()
+                  }
+                }
+                .swipeActions {
+                  Button("Delete") {
+                    print("delete item here")
+                  }
+                  .tint(.red)
+                }
+                Divider()
+              }
+            } header: {
+              Text("Current Shift Types")
+                .foregroundColor(.blue)
+                .bold()
             }
-            .font(.caption)
-          }
-          .swipeActions {
-            Button("Delete") {
-              print("delete item here")
-            }
-            .tint(.red)
+
           }
         }
-        .listStyle(PlainListStyle())
-
+        .listStyle(InsetGroupedListStyle())
       }
-      
       
       // add shift button
       Button("New Shift Type") {
@@ -66,7 +91,7 @@ struct SettingsView: View {
       }
       .padding(.top, 50)
       .padding(.bottom, 50)
-
+      
     }
     .sheet(isPresented: $viewModel.showingNewShiftTypeView) {
       NewShiftTypeView(newShiftTypePresented: $viewModel.showingNewShiftTypeView)
