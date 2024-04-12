@@ -53,6 +53,7 @@ struct SettingsView: View {
         viewModel.showingNewShiftTypeView = true
       }
       .padding(.top, 50)
+      .padding(.bottom, 50)
 
     }
     .sheet(isPresented: $viewModel.showingNewShiftTypeView) {

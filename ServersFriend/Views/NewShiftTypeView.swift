@@ -18,88 +18,87 @@ struct NewShiftTypeView: View {
   @Binding var newShiftTypePresented: Bool
   
   var body: some View {
-    Text("New Shift Type View")
     
-    
-    // SHIFT TYPE STRUCT
-    //    let id: String
-    //    let hourlyWage: Double
-    //    let typeOfShift: String
-    //    let employer: DocumentReference
-    
-    // TODO: IMPLEMENT LATER
-    //    let tipIn: Bool
-    //    let tipOut: Bool
-    //    let timeIn: TimeInterval
-    //    let timeOut: TimeInterval
-    
-    Form {
-      // error message if validation doesn't pass
-      if !viewModel.errorMsg.isEmpty {
-        Text(viewModel.errorMsg)
-          .foregroundColor(.red)
-      }
+    ZStack {
+      RoundedRectangle(cornerRadius: /*@START_MENU_TOKEN@*/25.0/*@END_MENU_TOKEN@*/)
+        .foregroundColor(.blue)
       
-      // Employer Dropdown
-      
-      // Shift Type Name *
-      TextField("Shift Type Name", text: $viewModel.shiftType)
-      TextField("Hourly Wage", text: $viewModel.decimalString)
-        .keyboardType(.decimalPad)
-
-//      TextField("Hourly Wage", value: $viewModel.hourlyWage, format: .number)
-      
-      //      HStack {
-      //        // Hourly Wage (only if user has 'trackHourly == true'
-      //        Text("Hourly Wage: //TODO")
-      //        Spacer()
-      //
-      //        VStack(alignment: .trailing) {
-      //          // Usually requires Tip In? (checkbox)
-      //          Toggle("Track Tip In? ", isOn: $viewModel.tipIn)
-      //
-      //          // Usually requires Tip Out? (checkbox)
-      //          Toggle("Track Tip Out? ", isOn: $viewModel.tipOut)
-      //
-      //        }
-      //        .toggleStyle(iOSCheckboxToggleStyle())
-      //      }
-      //      .padding(.top, 10)
-      //      .padding(.bottom, 10)
-      
-      //      VStack {
-      //        // Typical Time in ?
-      //        DatePicker(
-      //          "Time In",
-      //          selection: $viewModel.timeIn,
-      //          displayedComponents: .hourAndMinute
-      //        )
-      ////        .disabled(true)
-      ////        .foregroundColor(.gray)
-      //
-      //        // Typical Time Out ?
-      //        DatePicker(
-      //          "Time Out",
-      //          selection: $viewModel.timeOut,
-      //          displayedComponents: .hourAndMinute
-      //        )
-      ////        .disabled(true)
-      ////        .foregroundColor(.gray)
-      //      }
-      
-      HStack {
-        Spacer()
-        Button("Save") {
-          viewModel.createNewShiftType()
-          guard viewModel.errorMsg.isEmpty else {
-            return
+      VStack {
+        Text("New Shift Type")
+          .foregroundColor(.white)
+          .font(.system(size: 30))
+          .bold()
+          .padding(.top, 30)
+        
+        Form {
+          // error message if validation doesn't pass
+          if !viewModel.errorMsg.isEmpty {
+            Text(viewModel.errorMsg)
+              .foregroundColor(.red)
           }
-          newShiftTypePresented = false
+          
+          // Employer Dropdown
+          
+          // Shift Type Name *
+          TextField("Shift Type Name", text: $viewModel.shiftType)
+          TextField("Hourly Wage", text: $viewModel.decimalString)
+            .keyboardType(.decimalPad)
+
+    //      TextField("Hourly Wage", value: $viewModel.hourlyWage, format: .number)
+          
+          //      HStack {
+          //        // Hourly Wage (only if user has 'trackHourly == true'
+          //        Text("Hourly Wage: //TODO")
+          //        Spacer()
+          //
+          //        VStack(alignment: .trailing) {
+          //          // Usually requires Tip In? (checkbox)
+          //          Toggle("Track Tip In? ", isOn: $viewModel.tipIn)
+          //
+          //          // Usually requires Tip Out? (checkbox)
+          //          Toggle("Track Tip Out? ", isOn: $viewModel.tipOut)
+          //
+          //        }
+          //        .toggleStyle(iOSCheckboxToggleStyle())
+          //      }
+          //      .padding(.top, 10)
+          //      .padding(.bottom, 10)
+          
+          //      VStack {
+          //        // Typical Time in ?
+          //        DatePicker(
+          //          "Time In",
+          //          selection: $viewModel.timeIn,
+          //          displayedComponents: .hourAndMinute
+          //        )
+          ////        .disabled(true)
+          ////        .foregroundColor(.gray)
+          //
+          //        // Typical Time Out ?
+          //        DatePicker(
+          //          "Time Out",
+          //          selection: $viewModel.timeOut,
+          //          displayedComponents: .hourAndMinute
+          //        )
+          ////        .disabled(true)
+          ////        .foregroundColor(.gray)
+          //      }
+          
+          HStack {
+            Spacer()
+            Button("Save") {
+              viewModel.createNewShiftType()
+              guard viewModel.errorMsg.isEmpty else {
+                return
+              }
+              newShiftTypePresented = false
+            }
+            .buttonStyle(BorderedProminentButtonStyle())
+          }
+          .padding(.top, 10)
+          .padding(.bottom, 10)
         }
-        .buttonStyle(BorderedProminentButtonStyle())
       }
-      .padding(.top, 10)
-      .padding(.bottom, 10)
     }
   }
 }
