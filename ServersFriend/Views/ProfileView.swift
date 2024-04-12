@@ -21,6 +21,7 @@ struct ProfileView: View {
         if let user = viewModel.user {
           profile(user: user)
           SettingsView(userID: currentUserID)
+          Spacer()
         } else {
           Text("Loading user info...")
         }

@@ -10,13 +10,9 @@ import FirebaseFirestore
 
 struct Shift: Codable, Identifiable {
   let id: String
-  let typeOfShift: String
+  let nameOfShift: String
   let hourlyWage: Double
-
-  // TODO: IMPLEMENT LATER
-  //  let tipIn: Bool
-  //  let tipOut: Bool
-  //  let timeIn: Date?
-  //  let timeOut: Date?
-  //  let employer: DocumentReference?
+  let tipIn: Bool
+  let tipOut: Bool
+//  let employer: DocumentReference?
 }

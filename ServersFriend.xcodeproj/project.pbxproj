@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		37287CE02BC8FCED003AC41C /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37287CDF2BC8FCED003AC41C /* SettingsView.swift */; };
 		37287CE22BC8FD40003AC41C /* SettingsViewVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37287CE12BC8FD40003AC41C /* SettingsViewVM.swift */; };
+		37287CE52BC9A6D1003AC41C /* CheckBoxStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37287CE42BC9A6D1003AC41C /* CheckBoxStyle.swift */; };
 		376896AF2BB3CA1300F7CF66 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 376896AE2BB3CA1300F7CF66 /* GoogleService-Info.plist */; };
 		376896B22BB3CB6900F7CF66 /* FirebaseAnalytics in Frameworks */ = {isa = PBXBuildFile; productRef = 376896B12BB3CB6900F7CF66 /* FirebaseAnalytics */; };
 		376896B42BB3CB6900F7CF66 /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = 376896B32BB3CB6900F7CF66 /* FirebaseAuth */; };
@@ -65,6 +66,7 @@
 /* Begin PBXFileReference section */
 		37287CDF2BC8FCED003AC41C /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
 		37287CE12BC8FD40003AC41C /* SettingsViewVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewVM.swift; sourceTree = "<group>"; };
+		37287CE42BC9A6D1003AC41C /* CheckBoxStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckBoxStyle.swift; sourceTree = "<group>"; };
 		376896AE2BB3CA1300F7CF66 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		376896B92BB3CEAA00F7CF66 /* RegisterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterView.swift; sourceTree = "<group>"; };
 		376896BB2BB3CEC600F7CF66 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
@@ -129,6 +131,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		37287CE32BC9A6BA003AC41C /* Styles */ = {
+			isa = PBXGroup;
+			children = (
+				37287CE42BC9A6D1003AC41C /* CheckBoxStyle.swift */,
+			);
+			path = Styles;
+			sourceTree = "<group>";
+		};
 		375FEA762BB3C65300A8FD8A /* Views */ = {
 			isa = PBXGroup;
 			children = (
@@ -221,6 +231,7 @@
 		376FCF2B2B9AA54A00202087 /* ServersFriend */ = {
 			isa = PBXGroup;
 			children = (
+				37287CE32BC9A6BA003AC41C /* Styles */,
 				376896CC2BB3E5E600F7CF66 /* lib */,
 				376896C92BB3D3FF00F7CF66 /* Components */,
 				375FEA7A2BB3C6A900A8FD8A /* Other */,
@@ -414,6 +425,7 @@
 				376896C62BB3D15200F7CF66 /* User.swift in Sources */,
 				37287CE22BC8FD40003AC41C /* SettingsViewVM.swift in Sources */,
 				376896BE2BB3CF0D00F7CF66 /* ServerOverviewView.swift in Sources */,
+				37287CE52BC9A6D1003AC41C /* CheckBoxStyle.swift in Sources */,
 				37287CE02BC8FCED003AC41C /* SettingsView.swift in Sources */,
 				376896E42BB5E64200F7CF66 /* NewShiftTypeViewVM.swift in Sources */,
 				376896C22BB3D0EB00F7CF66 /* MainViewVM.swift in Sources */,

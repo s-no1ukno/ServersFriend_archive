@@ -30,22 +30,34 @@ struct SettingsView: View {
   var body: some View {
     
     VStack {
-      Text("Your shift types:")
-      // list of shifts
-      List(items) { item in
-        HStack {
-          Text(item.typeOfShift)
-          Spacer()
-          Text(String(item.hourlyWage))
-        }
-        .swipeActions {
-          Button("Delete") {
-            print("delete item here")
+      if items.isEmpty {
+        Text("Add a new shift to start adding tips!")
+      } else {
+        Text("Your shift types:")
+        // list of shifts
+        List(items) { item in
+          HStack {
+            Text(item.nameOfShift)
+              .bold()
+            Spacer()
+            Text(String(format: "$ %.2f", item.hourlyWage))
+            
+            VStack {
+              Text("Tracking Tip In? : \(item.tipIn)")
+              Text("Tracking Tip Out? : \(item.tipOut)")
+            }
+            .font(.caption)
           }
-          .tint(.red)
+          .swipeActions {
+            Button("Delete") {
+              print("delete item here")
+            }
+            .tint(.red)
+          }
         }
+        .listStyle(PlainListStyle())
+
       }
-      .listStyle(PlainListStyle())
       
       
       // add shift button

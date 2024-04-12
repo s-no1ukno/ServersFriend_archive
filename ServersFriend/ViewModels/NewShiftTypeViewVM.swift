@@ -10,11 +10,15 @@ import FirebaseAuth
 import FirebaseFirestore
 
 class NewShiftTypeViewVM: ObservableObject {
-  @Published var shiftType = ""
+  @Published var shiftTypeName = ""
   @Published var decimalString = ""
   @Published var hourlyWage = 0.0
-  @Published var errorMsg = ""
+  @Published var tipIn = false
+  @Published var tipOut = false
+//  @Published var employer = ""
   
+  @Published var errorMsg = ""
+
   func createNewShiftType() -> Void {
     // get current userID
     guard let currentUserID = Auth.auth().currentUser?.uid else {
@@ -29,8 +33,11 @@ class NewShiftTypeViewVM: ObservableObject {
     let newID = UUID().uuidString
     let newShift = Shift(
       id: newID,
-      typeOfShift: shiftType,
-      hourlyWage: hourlyWage
+      nameOfShift: shiftTypeName,
+      hourlyWage: hourlyWage,
+      tipIn: tipIn,
+      tipOut: tipOut
+//      employer: employer
     )
     
     let db = Firestore.firestore()
@@ -50,7 +57,7 @@ class NewShiftTypeViewVM: ObservableObject {
   var canSave: Bool {
     // validation for saving here
     // check that shiftType is not empty
-    guard !shiftType.trimmingCharacters(in: .whitespaces).isEmpty else {
+    guard !shiftTypeName.trimmingCharacters(in: .whitespaces).isEmpty else {
       errorMsg = "Please add a name for your shift."
       return false
     }
