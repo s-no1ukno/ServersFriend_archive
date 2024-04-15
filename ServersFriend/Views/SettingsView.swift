@@ -65,11 +65,18 @@ struct SettingsView: View {
                   Spacer()
                 }
               }
-              .swipeActions {
+              .swipeActions(edge: .trailing){
                 Button("Delete") {
-                  print("delete item here")
+                  viewModel.deleteShift(id: item.id)
                 }
                 .tint(.red)
+              }
+              .swipeActions(edge: .leading) {
+                Button("Edit") {
+                  print("edit item here")
+                  // TODO: Hook up edit shift functionality here
+                }
+                .tint(.green)
               }
             }
           } header: {
