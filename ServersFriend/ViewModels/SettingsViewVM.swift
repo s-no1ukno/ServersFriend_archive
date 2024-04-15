@@ -17,13 +17,4 @@ class SettingsViewVM: ObservableObject {
     self.userID = userID
   }
   
-  func deleteShift (id: String) {
-    let db = Firestore.firestore()
-    
-    db.collection("users")
-      .document(userID)
-      .collection("shifts")
-      .document(id)
-      .delete()
-  }
 }

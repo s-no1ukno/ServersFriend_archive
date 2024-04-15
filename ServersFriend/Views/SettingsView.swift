@@ -7,10 +7,13 @@
 
 import SwiftUI
 import FirebaseFirestoreSwift
+import PopupView
 
 struct SettingsView: View {
   @StateObject var viewModel: SettingsViewVM
   @FirestoreQuery var items: [Shift]
+  
+  @State var showingEditPopup: Bool
   
   init(userID: String) {
     // Query to database for entries along following path:
@@ -24,16 +27,10 @@ struct SettingsView: View {
     self._viewModel = StateObject(
       wrappedValue: SettingsViewVM(userID: userID)
     )
-
+    self._showingEditPopup = State(initialValue: false)
   }
   
-  private func formatTipText(bool: Bool) -> Text {
-    if bool == false {
-      return Text("No").foregroundColor(.red)
-    } else {
-      return Text("Yes").foregroundColor(.green)
-    }
-  }
+//  var targetShift: Shift
   
   var body: some View {
     
@@ -44,40 +41,9 @@ struct SettingsView: View {
         List {
           Section {
             ForEach(items) { item in
-              VStack {
-                HStack {
-                  Text(item.nameOfShift)
-                    .bold()
-                  Spacer()
-                  Text(String(format: "$ %.2f per hour", item.hourlyWage))
-                    .bold()
-                }
-                .padding(.top, 10)
-                .padding(.bottom, 10)
-                HStack {
-                  VStack(alignment: .leading) {
-                    Text("Tracking Tip In? \(formatTipText(bool: item.tipIn))")
-                    Text("Tracking Tip Out? \(formatTipText(bool: item.tipOut))")
-                  }
-                  .font(.caption)
-                  .bold()
-                  
-                  Spacer()
-                }
-              }
-              .swipeActions(edge: .trailing){
-                Button("Delete") {
-                  viewModel.deleteShift(id: item.id)
-                }
-                .tint(.red)
-              }
-              .swipeActions(edge: .leading) {
-                Button("Edit") {
-                  print("edit item here")
-                  // TODO: Hook up edit shift functionality here
-                }
-                .tint(.green)
-              }
+              // TODO: Refactor component here for each row -> then `item` binding can be handed to popup
+              
+              ShiftRowView(targetShift: item, showingEditPopup: $showingEditPopup)
             }
           } header: {
             Text("Current Shift Types")
@@ -99,7 +65,14 @@ struct SettingsView: View {
     .sheet(isPresented: $viewModel.showingNewShiftTypeView) {
       NewShiftTypeView(newShiftTypePresented: $viewModel.showingNewShiftTypeView)
     }
-    
+    .popup(isPresented: $showingEditPopup) {
+      Text("The popup")
+        .frame(width: 200, height: 60)
+        .background(Color(red: 0.85, green: 0.8, blue: 0.95))
+        .cornerRadius(30.0)
+    } customize: {
+      $0.autohideIn(2)
+    }
   }
 }
 
