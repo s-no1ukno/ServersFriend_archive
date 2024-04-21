@@ -27,11 +27,18 @@ struct MainView: View {
         .tabItem {
           Label("Home", systemImage: "house")
         }
-      ProfileView(userID: viewModel.currentUserID)
+      CalendarView()
         .tabItem {
-          Label("Profile", systemImage: "person.circle")
+          Label("Calendar", systemImage: "calendar.badge.clock")
         }
-      
+      ShiftsView()
+        .tabItem {
+          Label("Shifts", systemImage: "pencil.line")
+        }
+      SettingsView()
+        .tabItem {
+          Label("Settings", systemImage: "gearshape")
+        }
     }
   }
 }

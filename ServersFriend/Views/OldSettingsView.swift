@@ -9,7 +9,7 @@ import SwiftUI
 import FirebaseFirestoreSwift
 import PopupView
 
-struct SettingsView: View {
+struct OldSettingsView: View {
   @EnvironmentObject var shiftEditSettings: ShiftEnvironment
   @StateObject var viewModel: SettingsViewVM
   @FirestoreQuery var items: [Shift]
@@ -82,5 +82,5 @@ struct SettingsView: View {
 }
 
 #Preview {
-    SettingsView(userID: "io741v5yxYPiRveSiqfnGdjKch82")
+    OldSettingsView(userID: "io741v5yxYPiRveSiqfnGdjKch82")
 }

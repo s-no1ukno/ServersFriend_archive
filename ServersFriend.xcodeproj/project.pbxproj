@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		37287CE02BC8FCED003AC41C /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37287CDF2BC8FCED003AC41C /* SettingsView.swift */; };
+		37287CE02BC8FCED003AC41C /* OldSettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37287CDF2BC8FCED003AC41C /* OldSettingsView.swift */; };
 		37287CE22BC8FD40003AC41C /* SettingsViewVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37287CE12BC8FD40003AC41C /* SettingsViewVM.swift */; };
 		37287CE52BC9A6D1003AC41C /* CheckBoxStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37287CE42BC9A6D1003AC41C /* CheckBoxStyle.swift */; };
 		37287CE82BCCED65003AC41C /* PopupView in Frameworks */ = {isa = PBXBuildFile; productRef = 37287CE72BCCED65003AC41C /* PopupView */; };
@@ -48,6 +48,9 @@
 		376FCF482B9AA54C00202087 /* ServersFriendUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 376FCF472B9AA54C00202087 /* ServersFriendUITests.swift */; };
 		376FCF4A2B9AA54C00202087 /* ServersFriendUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 376FCF492B9AA54C00202087 /* ServersFriendUITestsLaunchTests.swift */; };
 		37F3C2982BD212020061FA19 /* ShiftEnvironment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37F3C2972BD212020061FA19 /* ShiftEnvironment.swift */; };
+		37F3C2D82BD5D7B30061FA19 /* CalendarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37F3C2D72BD5D7B30061FA19 /* CalendarView.swift */; };
+		37F3C2DA2BD5D8280061FA19 /* ShiftsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37F3C2D92BD5D8280061FA19 /* ShiftsView.swift */; };
+		37F3C2DC2BD5D8620061FA19 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37F3C2DB2BD5D8620061FA19 /* SettingsView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -68,7 +71,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		37287CDF2BC8FCED003AC41C /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
+		37287CDF2BC8FCED003AC41C /* OldSettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OldSettingsView.swift; sourceTree = "<group>"; };
 		37287CE12BC8FD40003AC41C /* SettingsViewVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewVM.swift; sourceTree = "<group>"; };
 		37287CE42BC9A6D1003AC41C /* CheckBoxStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckBoxStyle.swift; sourceTree = "<group>"; };
 		37287CEB2BCD27EE003AC41C /* ShiftRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShiftRowView.swift; sourceTree = "<group>"; };
@@ -107,6 +110,9 @@
 		376FCF472B9AA54C00202087 /* ServersFriendUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServersFriendUITests.swift; sourceTree = "<group>"; };
 		376FCF492B9AA54C00202087 /* ServersFriendUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServersFriendUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		37F3C2972BD212020061FA19 /* ShiftEnvironment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShiftEnvironment.swift; sourceTree = "<group>"; };
+		37F3C2D72BD5D7B30061FA19 /* CalendarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarView.swift; sourceTree = "<group>"; };
+		37F3C2D92BD5D8280061FA19 /* ShiftsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShiftsView.swift; sourceTree = "<group>"; };
+		37F3C2DB2BD5D8620061FA19 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -151,13 +157,13 @@
 			isa = PBXGroup;
 			children = (
 				376FCF2E2B9AA54A00202087 /* MainView.swift */,
-				376896BD2BB3CF0D00F7CF66 /* ServerOverviewView.swift */,
-				376896B92BB3CEAA00F7CF66 /* RegisterView.swift */,
-				376896BB2BB3CEC600F7CF66 /* LoginView.swift */,
+				37F3C2D42BD5D5860061FA19 /* AuthViews */,
+				37F3C2D52BD5D5930061FA19 /* NavigationViews */,
+				37F3C2D62BD5D5BA0061FA19 /* SubViews */,
 				376896D52BB40C9A00F7CF66 /* NewTipEntryView.swift */,
 				376896D72BB417C300F7CF66 /* ProfileView.swift */,
 				376896E12BB5E15300F7CF66 /* NewShiftTypeView.swift */,
-				37287CDF2BC8FCED003AC41C /* SettingsView.swift */,
+				37287CDF2BC8FCED003AC41C /* OldSettingsView.swift */,
 				37287CEB2BCD27EE003AC41C /* ShiftRowView.swift */,
 			);
 			path = Views;
@@ -167,8 +173,6 @@
 			isa = PBXGroup;
 			children = (
 				376896C12BB3D0EB00F7CF66 /* MainViewVM.swift */,
-				376896BF2BB3D0E000F7CF66 /* RegisterViewVM.swift */,
-				376896C32BB3D0F800F7CF66 /* LoginViewVM.swift */,
 				376896D92BB4B7A600F7CF66 /* ProfileViewVM.swift */,
 				376896E32BB5E64200F7CF66 /* NewShiftTypeViewVM.swift */,
 				37287CE12BC8FD40003AC41C /* SettingsViewVM.swift */,
@@ -286,6 +290,51 @@
 				37F3C2972BD212020061FA19 /* ShiftEnvironment.swift */,
 			);
 			path = Environment;
+			sourceTree = "<group>";
+		};
+		37F3C2D42BD5D5860061FA19 /* AuthViews */ = {
+			isa = PBXGroup;
+			children = (
+				37F3C2DD2BD5DC360061FA19 /* ViewModels */,
+				376896B92BB3CEAA00F7CF66 /* RegisterView.swift */,
+				376896BB2BB3CEC600F7CF66 /* LoginView.swift */,
+			);
+			path = AuthViews;
+			sourceTree = "<group>";
+		};
+		37F3C2D52BD5D5930061FA19 /* NavigationViews */ = {
+			isa = PBXGroup;
+			children = (
+				37F3C2DE2BD5DC5F0061FA19 /* ViewModels */,
+				376896BD2BB3CF0D00F7CF66 /* ServerOverviewView.swift */,
+				37F3C2D72BD5D7B30061FA19 /* CalendarView.swift */,
+				37F3C2D92BD5D8280061FA19 /* ShiftsView.swift */,
+				37F3C2DB2BD5D8620061FA19 /* SettingsView.swift */,
+			);
+			path = NavigationViews;
+			sourceTree = "<group>";
+		};
+		37F3C2D62BD5D5BA0061FA19 /* SubViews */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = SubViews;
+			sourceTree = "<group>";
+		};
+		37F3C2DD2BD5DC360061FA19 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				376896BF2BB3D0E000F7CF66 /* RegisterViewVM.swift */,
+				376896C32BB3D0F800F7CF66 /* LoginViewVM.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		37F3C2DE2BD5DC5F0061FA19 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModels;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -442,6 +491,7 @@
 				376896DC2BB4BB0C00F7CF66 /* Shift.swift in Sources */,
 				376896BC2BB3CEC600F7CF66 /* LoginView.swift in Sources */,
 				376896CB2BB3DB1300F7CF66 /* TLButton.swift in Sources */,
+				37F3C2D82BD5D7B30061FA19 /* CalendarView.swift in Sources */,
 				376896C82BB3D3DC00F7CF66 /* Header.swift in Sources */,
 				376896D82BB417C300F7CF66 /* ProfileView.swift in Sources */,
 				376896C62BB3D15200F7CF66 /* User.swift in Sources */,
@@ -449,9 +499,11 @@
 				37287CE22BC8FD40003AC41C /* SettingsViewVM.swift in Sources */,
 				376896BE2BB3CF0D00F7CF66 /* ServerOverviewView.swift in Sources */,
 				37287CE52BC9A6D1003AC41C /* CheckBoxStyle.swift in Sources */,
-				37287CE02BC8FCED003AC41C /* SettingsView.swift in Sources */,
+				37287CE02BC8FCED003AC41C /* OldSettingsView.swift in Sources */,
+				37F3C2DC2BD5D8620061FA19 /* SettingsView.swift in Sources */,
 				376896E42BB5E64200F7CF66 /* NewShiftTypeViewVM.swift in Sources */,
 				376896C22BB3D0EB00F7CF66 /* MainViewVM.swift in Sources */,
+				37F3C2DA2BD5D8280061FA19 /* ShiftsView.swift in Sources */,
 				376FCF2D2B9AA54A00202087 /* ServersFriendApp.swift in Sources */,
 				376896E22BB5E15300F7CF66 /* NewShiftTypeView.swift in Sources */,
 				37287CEE2BCD34A4003AC41C /* ShiftRowViewVM.swift in Sources */,

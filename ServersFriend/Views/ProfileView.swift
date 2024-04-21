@@ -20,7 +20,7 @@ struct ProfileView: View {
       VStack {
         if let user = viewModel.user {
           profile(user: user)
-          SettingsView(userID: currentUserID)
+          OldSettingsView(userID: currentUserID)
           Spacer()
         } else {
           Text("Loading user info...")
