@@ -47,6 +47,7 @@
 		376FCF3E2B9AA54C00202087 /* ServersFriendTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 376FCF3D2B9AA54C00202087 /* ServersFriendTests.swift */; };
 		376FCF482B9AA54C00202087 /* ServersFriendUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 376FCF472B9AA54C00202087 /* ServersFriendUITests.swift */; };
 		376FCF4A2B9AA54C00202087 /* ServersFriendUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 376FCF492B9AA54C00202087 /* ServersFriendUITestsLaunchTests.swift */; };
+		37F3C2982BD212020061FA19 /* ShiftEnvironment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37F3C2972BD212020061FA19 /* ShiftEnvironment.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -105,6 +106,7 @@
 		376FCF432B9AA54C00202087 /* ServersFriendUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ServersFriendUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		376FCF472B9AA54C00202087 /* ServersFriendUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServersFriendUITests.swift; sourceTree = "<group>"; };
 		376FCF492B9AA54C00202087 /* ServersFriendUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServersFriendUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		37F3C2972BD212020061FA19 /* ShiftEnvironment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShiftEnvironment.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -239,6 +241,7 @@
 		376FCF2B2B9AA54A00202087 /* ServersFriend */ = {
 			isa = PBXGroup;
 			children = (
+				37F3C2962BD211D40061FA19 /* Environment */,
 				37287CE32BC9A6BA003AC41C /* Styles */,
 				376896CC2BB3E5E600F7CF66 /* lib */,
 				376896C92BB3D3FF00F7CF66 /* Components */,
@@ -275,6 +278,14 @@
 				376FCF492B9AA54C00202087 /* ServersFriendUITestsLaunchTests.swift */,
 			);
 			path = ServersFriendUITests;
+			sourceTree = "<group>";
+		};
+		37F3C2962BD211D40061FA19 /* Environment */ = {
+			isa = PBXGroup;
+			children = (
+				37F3C2972BD212020061FA19 /* ShiftEnvironment.swift */,
+			);
+			path = Environment;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -419,6 +430,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				37F3C2982BD212020061FA19 /* ShiftEnvironment.swift in Sources */,
 				376896E62BB5ED1500F7CF66 /* Outlets.swift in Sources */,
 				376896C02BB3D0E000F7CF66 /* RegisterViewVM.swift in Sources */,
 				376896BA2BB3CEAA00F7CF66 /* RegisterView.swift in Sources */,

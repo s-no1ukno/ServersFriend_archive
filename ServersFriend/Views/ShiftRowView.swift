@@ -9,6 +9,7 @@ import SwiftUI
 
 struct ShiftRowView: View {
 //  @Binding var showingEditPopup: Binding<Bool>
+  @EnvironmentObject var shiftEditSettings: ShiftEnvironment
   @StateObject var viewModel = ShiftRowViewVM()
   @Binding var showingEditPopup: Bool
   
@@ -18,7 +19,6 @@ struct ShiftRowView: View {
   @State var tipIn: Bool
   @State var tipOut: Bool
   
-
   init(targetShift: Shift, showingEditPopup: Binding<Bool>) {
     self._showingEditPopup = showingEditPopup
     self.id = targetShift.id
@@ -28,6 +28,21 @@ struct ShiftRowView: View {
     self.tipOut = targetShift.tipOut
   }
   
+  /// Updates `ShiftEnvironment` variable to store the target shift being updated in a different part of app
+  private func handleEditShift() {
+    showingEditPopup = true
+    print("editing")
+    //    shiftEditSettings.editing = true
+//    shiftEditSettings.isDefault = false
+//    shiftEditSettings.shift = Shift(
+//      id: id,
+//      nameOfShift: nameOfShift,
+//      hourlyWage: hourlyWage,
+//      tipIn: tipIn,
+//      tipOut: tipOut
+//    )
+  }
+
   private func formatTipText(bool: Bool) -> Text {
     if bool == false {
       return Text("No").foregroundColor(.red)
@@ -71,8 +86,7 @@ struct ShiftRowView: View {
       Button("Edit") {
         print("edit item here")
         // TODO: Hook up edit shift functionality here
-        showingEditPopup = true
-//        showingEditPopup = id
+        handleEditShift()
       }
       .tint(.green)
     }

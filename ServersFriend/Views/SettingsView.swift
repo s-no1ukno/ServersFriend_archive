@@ -10,6 +10,7 @@ import FirebaseFirestoreSwift
 import PopupView
 
 struct SettingsView: View {
+  @EnvironmentObject var shiftEditSettings: ShiftEnvironment
   @StateObject var viewModel: SettingsViewVM
   @FirestoreQuery var items: [Shift]
   
@@ -65,14 +66,18 @@ struct SettingsView: View {
     .sheet(isPresented: $viewModel.showingNewShiftTypeView) {
       NewShiftTypeView(newShiftTypePresented: $viewModel.showingNewShiftTypeView)
     }
-    .popup(isPresented: $showingEditPopup) {
-      Text("The popup")
-        .frame(width: 200, height: 60)
-        .background(Color(red: 0.85, green: 0.8, blue: 0.95))
-        .cornerRadius(30.0)
-    } customize: {
-      $0.autohideIn(2)
+    .sheet(isPresented: $showingEditPopup) {
+      Text("Testing")
     }
+//    .popup(isPresented: $showingEditPopup) {
+//      Text("Testing")
+//        .frame(width: 200, height: 60)
+//        .background(Color(red: 0.85, green: 0.8, blue: 0.95))
+//        .cornerRadius(30.0)
+//    }
+//  customize: {
+////      $0.autohideIn(2)
+//    }
   }
 }
 
