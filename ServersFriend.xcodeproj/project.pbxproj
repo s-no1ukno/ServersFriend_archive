@@ -12,7 +12,6 @@
 		37287CE52BC9A6D1003AC41C /* CheckBoxStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37287CE42BC9A6D1003AC41C /* CheckBoxStyle.swift */; };
 		37287CE82BCCED65003AC41C /* PopupView in Frameworks */ = {isa = PBXBuildFile; productRef = 37287CE72BCCED65003AC41C /* PopupView */; };
 		37287CEC2BCD27EE003AC41C /* ShiftRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37287CEB2BCD27EE003AC41C /* ShiftRowView.swift */; };
-		37287CEE2BCD34A4003AC41C /* ShiftRowViewVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37287CED2BCD34A4003AC41C /* ShiftRowViewVM.swift */; };
 		376896AF2BB3CA1300F7CF66 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 376896AE2BB3CA1300F7CF66 /* GoogleService-Info.plist */; };
 		376896B22BB3CB6900F7CF66 /* FirebaseAnalytics in Frameworks */ = {isa = PBXBuildFile; productRef = 376896B12BB3CB6900F7CF66 /* FirebaseAnalytics */; };
 		376896B42BB3CB6900F7CF66 /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = 376896B32BB3CB6900F7CF66 /* FirebaseAuth */; };
@@ -76,7 +75,6 @@
 		37287CE12BC8FD40003AC41C /* SettingsViewVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewVM.swift; sourceTree = "<group>"; };
 		37287CE42BC9A6D1003AC41C /* CheckBoxStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckBoxStyle.swift; sourceTree = "<group>"; };
 		37287CEB2BCD27EE003AC41C /* ShiftRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShiftRowView.swift; sourceTree = "<group>"; };
-		37287CED2BCD34A4003AC41C /* ShiftRowViewVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShiftRowViewVM.swift; sourceTree = "<group>"; };
 		376896AE2BB3CA1300F7CF66 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		376896B92BB3CEAA00F7CF66 /* RegisterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterView.swift; sourceTree = "<group>"; };
 		376896BB2BB3CEC600F7CF66 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
@@ -177,7 +175,6 @@
 				376896D92BB4B7A600F7CF66 /* ProfileViewVM.swift */,
 				376896E32BB5E64200F7CF66 /* NewShiftTypeViewVM.swift */,
 				37287CE12BC8FD40003AC41C /* SettingsViewVM.swift */,
-				37287CED2BCD34A4003AC41C /* ShiftRowViewVM.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -518,7 +515,6 @@
 				37F3C2DA2BD5D8280061FA19 /* ShiftsView.swift in Sources */,
 				376FCF2D2B9AA54A00202087 /* ServersFriendApp.swift in Sources */,
 				376896E22BB5E15300F7CF66 /* NewShiftTypeView.swift in Sources */,
-				37287CEE2BCD34A4003AC41C /* ShiftRowViewVM.swift in Sources */,
 				376896D02BB3F4CD00F7CF66 /* Database.swift in Sources */,
 				376896CE2BB3E5F500F7CF66 /* Utils.swift in Sources */,
 				376896D22BB3F6BA00F7CF66 /* Extensions.swift in Sources */,

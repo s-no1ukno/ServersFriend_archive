@@ -20,11 +20,11 @@ class ShiftsViewVM: ObservableObject {
   @Published var isShowingNewShift = false
   @Published var errorMsg = ""
   
-  var shiftTypeName = ""
-  var decimalString = ""
-  var hourlyWage = 0.00
-  var tipIn = false
-  var tipOut = false
+  @Published var shiftTypeName = ""
+  @Published var decimalString = ""
+  @Published var hourlyWage = 0.00
+  @Published var tipIn = false
+  @Published var tipOut = false
   
   func createNewShiftType() {
     // get current userID
@@ -72,6 +72,20 @@ class ShiftsViewVM: ObservableObject {
     isShowingNewShift = false
   }
   
+  func deleteShift (id: String) -> Void {
+    guard let currentUserID = Auth.auth().currentUser?.uid else {
+      print("Need error handling cuz u a dumbass!!")
+      return
+    }
+    let db = Firestore.firestore()
+    
+    db.collection("users")
+      .document(currentUserID)
+      .collection("shifts")
+      .document(id)
+      .delete()
+  }
+
   private func canSave() -> Bool {
     print("Calling canSave func")
     // validation for saving here

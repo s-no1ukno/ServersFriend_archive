@@ -8,10 +8,8 @@
 import SwiftUI
 
 struct ShiftRowView: View {
-//  @Binding var showingEditPopup: Binding<Bool>
-  @EnvironmentObject var shiftEditSettings: ShiftEnvironment
-  @StateObject var viewModel = ShiftRowViewVM()
-//  @Binding var showingEditPopup: Bool
+//  @EnvironmentObject var vm: ShiftsViewVM
+  @ObservedObject var model: ShiftsViewVM
   
   @State var id: String
   @State var nameOfShift: String
@@ -26,8 +24,9 @@ struct ShiftRowView: View {
     self.hourlyWage = targetShift.hourlyWage
     self.tipIn = targetShift.tipIn
     self.tipOut = targetShift.tipOut
+    self._model = ObservedObject(wrappedValue: ShiftsViewVM())
   }
-  
+
   /// Updates `ShiftEnvironment` variable to store the target shift being updated in a different part of app
   private func handleEditShift() {
 //    showingEditPopup = true
@@ -78,7 +77,7 @@ struct ShiftRowView: View {
     }
     .swipeActions(edge: .trailing){
       Button("Delete") {
-        viewModel.deleteShift(id: id)
+        model.deleteShift(id: id)
       }
       .tint(.red)
     }
@@ -102,10 +101,5 @@ struct ShiftRowView: View {
       tipIn: false,
       tipOut: true
     )
-//    showingEditPopup: Binding(get: {
-//      return true
-//    }, set: { _ in
-//      
-//    })
   )
 }

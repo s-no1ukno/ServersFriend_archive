@@ -29,7 +29,7 @@ struct ShiftsView: View {
           List {
             Section {
               ForEach(shifts) { shift in
-                ShiftRowView(targetShift: shift /*showingEditPopup: $showingEditPopup*/)
+                ShiftRowView(targetShift: shift)
               }
             } header: {
               Text("Current Shift Types")
@@ -57,7 +57,6 @@ struct ShiftsView: View {
           HStack {
             Spacer()
             Button {
-              print("pressed add button")
               vm.isShowingNewShift = true
             } label: {
               Image(systemName: "plus.circle.fill")
@@ -66,23 +65,23 @@ struct ShiftsView: View {
           }
         }
       }
-      .sheet(isPresented: $vm.isShowingNewShift) {
-        NewShiftTypeView(viewModel: ShiftsViewVM())
-      }
-//      .popup(isPresented: $vm.isShowingNewShift) {
-//        NewShiftTypeView(viewModel: vm)
-//          .frame(
-//            width: UIScreen.main.bounds.width - 20,
-//            height: (UIScreen.main.bounds.height / 3) * 2 - 10
-//          )
-//          .background(Color(red: 0.9, green: 0.9, blue: 0.9))
-//          .cornerRadius(30)
-//      } customize: {
-//        $0
-//          .closeOnTap(false)
-//          .dragToDismiss(true)
-//          .isOpaque(true)
+//      .sheet(isPresented: $vm.isShowingNewShift) {
+//        NewShiftTypeView(viewModel: ShiftsViewVM())
 //      }
+      .popup(isPresented: $vm.isShowingNewShift) {
+        NewShiftTypeView(viewModel: vm)
+          .frame(
+            width: UIScreen.main.bounds.width - 20,
+            height: (UIScreen.main.bounds.height / 3) * 2 - 10
+          )
+          .background(Color(red: 0.9, green: 0.9, blue: 0.9))
+          .cornerRadius(30)
+      } customize: {
+        $0
+          .closeOnTap(false)
+          .dragToDismiss(true)
+          .isOpaque(true)
+      }
     }
   }
 }
