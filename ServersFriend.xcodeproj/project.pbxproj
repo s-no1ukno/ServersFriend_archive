@@ -164,7 +164,6 @@
 				37F3C2D62BD5D5BA0061FA19 /* SubViews */,
 				376896D52BB40C9A00F7CF66 /* NewTipEntryView.swift */,
 				376896D72BB417C300F7CF66 /* ProfileView.swift */,
-				376896E12BB5E15300F7CF66 /* NewShiftTypeView.swift */,
 				37287CDF2BC8FCED003AC41C /* OldSettingsView.swift */,
 				37287CEB2BCD27EE003AC41C /* ShiftRowView.swift */,
 			);
@@ -286,6 +285,14 @@
 			path = ServersFriendUITests;
 			sourceTree = "<group>";
 		};
+		379EABE12BD6F16900BDFF77 /* ShiftsView_subviews */ = {
+			isa = PBXGroup;
+			children = (
+				376896E12BB5E15300F7CF66 /* NewShiftTypeView.swift */,
+			);
+			path = ShiftsView_subviews;
+			sourceTree = "<group>";
+		};
 		37F3C2962BD211D40061FA19 /* Environment */ = {
 			isa = PBXGroup;
 			children = (
@@ -319,6 +326,7 @@
 		37F3C2D62BD5D5BA0061FA19 /* SubViews */ = {
 			isa = PBXGroup;
 			children = (
+				379EABE12BD6F16900BDFF77 /* ShiftsView_subviews */,
 			);
 			path = SubViews;
 			sourceTree = "<group>";

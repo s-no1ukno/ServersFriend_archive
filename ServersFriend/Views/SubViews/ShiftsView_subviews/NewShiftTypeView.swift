@@ -15,16 +15,10 @@ let formatter: NumberFormatter = {
 
 struct NewShiftTypeView: View {
   @StateObject var viewModel: ShiftsViewVM
-  //  @ObservedObject var viewModel: ShiftsViewVM
-//  @Binding var newShiftTypePresented: Bool
   
   var body: some View {
-    
     NavigationStack {
       ZStack {
-//        RoundedRectangle(cornerRadius: /*@START_MENU_TOKEN@*/25.0/*@END_MENU_TOKEN@*/)
-//          .foregroundColor(.blue)
-        
         VStack {
           Form {
             Section(header: Text("New Shift")) {
@@ -54,11 +48,7 @@ struct NewShiftTypeView: View {
               HStack {
                 Spacer()
                 Button("Save") {
-                  guard viewModel.errorMsg.isEmpty else {
-                    return
-                  }
                   viewModel.createNewShiftType()
-                  //              newShiftTypePresented = false
                 }
                 .buttonStyle(BorderedProminentButtonStyle())
               }
@@ -70,7 +60,6 @@ struct NewShiftTypeView: View {
         }
       }
       .navigationTitle("New Shift")
-
     }
     .alert(isPresented: $viewModel.showAlert) {
       Alert(
