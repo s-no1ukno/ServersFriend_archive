@@ -11,7 +11,7 @@ struct ShiftRowView: View {
 //  @Binding var showingEditPopup: Binding<Bool>
   @EnvironmentObject var shiftEditSettings: ShiftEnvironment
   @StateObject var viewModel = ShiftRowViewVM()
-  @Binding var showingEditPopup: Bool
+//  @Binding var showingEditPopup: Bool
   
   @State var id: String
   @State var nameOfShift: String
@@ -19,8 +19,8 @@ struct ShiftRowView: View {
   @State var tipIn: Bool
   @State var tipOut: Bool
   
-  init(targetShift: Shift, showingEditPopup: Binding<Bool>) {
-    self._showingEditPopup = showingEditPopup
+  init(targetShift: Shift) {
+//    self._showingEditPopup = showingEditPopup
     self.id = targetShift.id
     self.nameOfShift = targetShift.nameOfShift
     self.hourlyWage = targetShift.hourlyWage
@@ -30,7 +30,7 @@ struct ShiftRowView: View {
   
   /// Updates `ShiftEnvironment` variable to store the target shift being updated in a different part of app
   private func handleEditShift() {
-    showingEditPopup = true
+//    showingEditPopup = true
     print("editing")
     //    shiftEditSettings.editing = true
 //    shiftEditSettings.isDefault = false
@@ -101,11 +101,11 @@ struct ShiftRowView: View {
       hourlyWage: 10.45,
       tipIn: false,
       tipOut: true
-    ),
-    showingEditPopup: Binding(get: {
-      return true
-    }, set: { _ in
-      
-    })
+    )
+//    showingEditPopup: Binding(get: {
+//      return true
+//    }, set: { _ in
+//      
+//    })
   )
 }

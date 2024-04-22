@@ -44,7 +44,7 @@ struct OldSettingsView: View {
             ForEach(items) { item in
               // TODO: Refactor component here for each row -> then `item` binding can be handed to popup
               
-              ShiftRowView(targetShift: item, showingEditPopup: $showingEditPopup)
+              ShiftRowView(targetShift: item/*showingEditPopup: $showingEditPopup*/)
             }
           } header: {
             Text("Current Shift Types")
@@ -64,7 +64,7 @@ struct OldSettingsView: View {
       
     }
     .sheet(isPresented: $viewModel.showingNewShiftTypeView) {
-      NewShiftTypeView(newShiftTypePresented: $viewModel.showingNewShiftTypeView)
+//      NewShiftTypeView(newShiftTypePresented: $viewModel.showingNewShiftTypeView)
     }
     .sheet(isPresented: $showingEditPopup) {
       Text("Testing")

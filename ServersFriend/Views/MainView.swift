@@ -31,7 +31,7 @@ struct MainView: View {
         .tabItem {
           Label("Calendar", systemImage: "calendar.badge.clock")
         }
-      ShiftsView()
+      ShiftsView(userID: viewModel.currentUserID)
         .tabItem {
           Label("Shifts", systemImage: "pencil.line")
         }
@@ -40,6 +40,7 @@ struct MainView: View {
           Label("Settings", systemImage: "gearshape")
         }
     }
+    .environmentObject(viewModel)
   }
 }
 

@@ -51,6 +51,7 @@
 		37F3C2D82BD5D7B30061FA19 /* CalendarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37F3C2D72BD5D7B30061FA19 /* CalendarView.swift */; };
 		37F3C2DA2BD5D8280061FA19 /* ShiftsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37F3C2D92BD5D8280061FA19 /* ShiftsView.swift */; };
 		37F3C2DC2BD5D8620061FA19 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37F3C2DB2BD5D8620061FA19 /* SettingsView.swift */; };
+		37F3C2E02BD5E62A0061FA19 /* ShiftsViewVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37F3C2DF2BD5E62A0061FA19 /* ShiftsViewVM.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -113,6 +114,7 @@
 		37F3C2D72BD5D7B30061FA19 /* CalendarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarView.swift; sourceTree = "<group>"; };
 		37F3C2D92BD5D8280061FA19 /* ShiftsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShiftsView.swift; sourceTree = "<group>"; };
 		37F3C2DB2BD5D8620061FA19 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
+		37F3C2DF2BD5E62A0061FA19 /* ShiftsViewVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShiftsViewVM.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -333,6 +335,7 @@
 		37F3C2DE2BD5DC5F0061FA19 /* ViewModels */ = {
 			isa = PBXGroup;
 			children = (
+				37F3C2DF2BD5E62A0061FA19 /* ShiftsViewVM.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -479,6 +482,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				37F3C2E02BD5E62A0061FA19 /* ShiftsViewVM.swift in Sources */,
 				37F3C2982BD212020061FA19 /* ShiftEnvironment.swift in Sources */,
 				376896E62BB5ED1500F7CF66 /* Outlets.swift in Sources */,
 				376896C02BB3D0E000F7CF66 /* RegisterViewVM.swift in Sources */,
