@@ -7,11 +7,11 @@
 
 import SwiftUI
 
-let formatter: NumberFormatter = {
-  let formatter = NumberFormatter()
-  formatter.numberStyle = .decimal
-  return formatter
-}()
+//let formatter: NumberFormatter = {
+//  let formatter = NumberFormatter()
+//  formatter.numberStyle = .decimal
+//  return formatter
+//}()
 
 struct NewShiftTypeView: View {
   @StateObject var viewModel: ShiftsViewVM
@@ -71,5 +71,5 @@ struct NewShiftTypeView: View {
 }
 
 #Preview {
-  NewShiftTypeView(viewModel: ShiftsViewVM())
+  NewShiftTypeView(viewModel: ShiftsViewVM(targetShift: nil))
 }

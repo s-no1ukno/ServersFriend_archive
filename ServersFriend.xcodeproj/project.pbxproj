@@ -46,6 +46,8 @@
 		376FCF3E2B9AA54C00202087 /* ServersFriendTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 376FCF3D2B9AA54C00202087 /* ServersFriendTests.swift */; };
 		376FCF482B9AA54C00202087 /* ServersFriendUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 376FCF472B9AA54C00202087 /* ServersFriendUITests.swift */; };
 		376FCF4A2B9AA54C00202087 /* ServersFriendUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 376FCF492B9AA54C00202087 /* ServersFriendUITestsLaunchTests.swift */; };
+		37B26D2A2BD8931A0025309C /* EditShiftTypeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37B26D292BD8931A0025309C /* EditShiftTypeView.swift */; };
+		37B26D2D2BD8AB640025309C /* EditShiftTypeVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37B26D2C2BD8AB640025309C /* EditShiftTypeVM.swift */; };
 		37F3C2982BD212020061FA19 /* ShiftEnvironment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37F3C2972BD212020061FA19 /* ShiftEnvironment.swift */; };
 		37F3C2D82BD5D7B30061FA19 /* CalendarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37F3C2D72BD5D7B30061FA19 /* CalendarView.swift */; };
 		37F3C2DA2BD5D8280061FA19 /* ShiftsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37F3C2D92BD5D8280061FA19 /* ShiftsView.swift */; };
@@ -108,6 +110,8 @@
 		376FCF432B9AA54C00202087 /* ServersFriendUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ServersFriendUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		376FCF472B9AA54C00202087 /* ServersFriendUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServersFriendUITests.swift; sourceTree = "<group>"; };
 		376FCF492B9AA54C00202087 /* ServersFriendUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServersFriendUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		37B26D292BD8931A0025309C /* EditShiftTypeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditShiftTypeView.swift; sourceTree = "<group>"; };
+		37B26D2C2BD8AB640025309C /* EditShiftTypeVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditShiftTypeVM.swift; sourceTree = "<group>"; };
 		37F3C2972BD212020061FA19 /* ShiftEnvironment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShiftEnvironment.swift; sourceTree = "<group>"; };
 		37F3C2D72BD5D7B30061FA19 /* CalendarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarView.swift; sourceTree = "<group>"; };
 		37F3C2D92BD5D8280061FA19 /* ShiftsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShiftsView.swift; sourceTree = "<group>"; };
@@ -286,8 +290,17 @@
 			isa = PBXGroup;
 			children = (
 				376896E12BB5E15300F7CF66 /* NewShiftTypeView.swift */,
+				37B26D292BD8931A0025309C /* EditShiftTypeView.swift */,
 			);
 			path = ShiftsView_subviews;
+			sourceTree = "<group>";
+		};
+		37B26D2B2BD8AA3D0025309C /* View Models */ = {
+			isa = PBXGroup;
+			children = (
+				37B26D2C2BD8AB640025309C /* EditShiftTypeVM.swift */,
+			);
+			path = "View Models";
 			sourceTree = "<group>";
 		};
 		37F3C2962BD211D40061FA19 /* Environment */ = {
@@ -323,6 +336,7 @@
 		37F3C2D62BD5D5BA0061FA19 /* SubViews */ = {
 			isa = PBXGroup;
 			children = (
+				37B26D2B2BD8AA3D0025309C /* View Models */,
 				379EABE12BD6F16900BDFF77 /* ShiftsView_subviews */,
 			);
 			path = SubViews;
@@ -496,6 +510,7 @@
 				376896D42BB4048A00F7CF66 /* AddButton.swift in Sources */,
 				376896D62BB40C9A00F7CF66 /* NewTipEntryView.swift in Sources */,
 				376896E02BB5DEAA00F7CF66 /* ShiftTypesList.swift in Sources */,
+				37B26D2A2BD8931A0025309C /* EditShiftTypeView.swift in Sources */,
 				376896C42BB3D0F800F7CF66 /* LoginViewVM.swift in Sources */,
 				376896DC2BB4BB0C00F7CF66 /* Shift.swift in Sources */,
 				376896BC2BB3CEC600F7CF66 /* LoginView.swift in Sources */,
@@ -513,6 +528,7 @@
 				376896E42BB5E64200F7CF66 /* NewShiftTypeViewVM.swift in Sources */,
 				376896C22BB3D0EB00F7CF66 /* MainViewVM.swift in Sources */,
 				37F3C2DA2BD5D8280061FA19 /* ShiftsView.swift in Sources */,
+				37B26D2D2BD8AB640025309C /* EditShiftTypeVM.swift in Sources */,
 				376FCF2D2B9AA54A00202087 /* ServersFriendApp.swift in Sources */,
 				376896E22BB5E15300F7CF66 /* NewShiftTypeView.swift in Sources */,
 				376896D02BB3F4CD00F7CF66 /* Database.swift in Sources */,

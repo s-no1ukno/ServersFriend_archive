@@ -10,8 +10,9 @@ import FirebaseFirestore
 
 struct ShiftsView: View {
   
-  @StateObject var vm = ShiftsViewVM()
+  @StateObject var vm = ShiftsViewVM(targetShift: nil)
   @State var currentUserID: String
+  @State var shiftsTracker: [Shift]?
   @FirestoreQuery var shifts: [Shift]
 
   init(userID: String) {
@@ -20,7 +21,7 @@ struct ShiftsView: View {
       collectionPath: "users/\(userID)/shifts"
     )
   }
-
+  
   var body: some View {
     NavigationStack {
       ZStack {

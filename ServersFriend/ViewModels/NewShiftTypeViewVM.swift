@@ -70,6 +70,7 @@ class NewShiftTypeViewVM: ObservableObject {
 
     // check that decimal string is a valid double
     guard Double(decimalString)?.isNaN == false else {
+      // TODO: fix error message to something helpful
       errorMsg = "Fucked up double"
       return false
     }
