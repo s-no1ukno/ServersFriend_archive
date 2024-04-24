@@ -17,7 +17,9 @@ Types, and spot to add new Shifts.
 
 ### Shift Type List
 
-- [ ] **Swipe action: delete** - delete the specific Shift Type
-- [ ] **Hold action: edit** - edit the name or wage of the shift type
-- [ ] **Style/Format** - style/format the list of shift types
+- [x] **Swipe action: delete** - delete the specific Shift Type
+- [x] **Hold action: edit** - edit the name or wage of the shift type
+- [x] **Style/Format** - style/format the list of shift types
+
+- [ ] **Fix Edit Shift Bug** - current bug doesn't update `ShiftsView` upon update of shift (edit functionality)
 
