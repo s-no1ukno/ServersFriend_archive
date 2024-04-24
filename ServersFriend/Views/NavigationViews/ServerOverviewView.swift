@@ -9,6 +9,10 @@ import SwiftUI
 
 struct ServerOverviewView: View {
   
+  @StateObject var controller = ServerOverviewVM()
+  
+  
+  
   var body: some View {
     NavigationStack {
       VStack {
@@ -34,12 +38,28 @@ struct ServerOverviewView: View {
         .padding(.top, 100)
         Spacer()
         Button("Add Tip") {
-          print("clicked the button")
+          controller.isShowingNewTip = true
         }
         .buttonStyle(BorderedButtonStyle())
         .padding(.bottom, 50)
       }
       .navigationTitle("Server Overview")
+      .popup(isPresented: $controller.isShowingNewTip) {
+        NewTipView(controller: controller)
+        .frame(
+          width: UIScreen.main.bounds.width - 30,
+          height: UIScreen.main.bounds.height / 3
+        )
+        .cornerRadius(20)
+      } customize: {
+        $0
+          .type(.floater())
+          .closeOnTap(false)
+          .dragToDismiss(true)
+          .isOpaque(true)
+          .closeOnTapOutside(true)
+          .backgroundColor(.black.opacity(0.4))
+      }
     }
   }
 }

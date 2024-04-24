@@ -8,7 +8,7 @@
 import Foundation
 import FirebaseFirestore
 
-struct Shift: Codable, Identifiable, Equatable {
+struct Shift: Codable, Identifiable, Equatable, Hashable {
   let id: String
   let nameOfShift: String
   let hourlyWage: Double

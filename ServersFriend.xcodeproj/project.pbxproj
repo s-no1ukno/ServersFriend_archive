@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3723ADE62BD97CCE001319E0 /* ServerOverviewVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3723ADE52BD97CCE001319E0 /* ServerOverviewVM.swift */; };
 		37287CE02BC8FCED003AC41C /* OldSettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37287CDF2BC8FCED003AC41C /* OldSettingsView.swift */; };
 		37287CE22BC8FD40003AC41C /* SettingsViewVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37287CE12BC8FD40003AC41C /* SettingsViewVM.swift */; };
 		37287CE52BC9A6D1003AC41C /* CheckBoxStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37287CE42BC9A6D1003AC41C /* CheckBoxStyle.swift */; };
@@ -48,6 +49,7 @@
 		376FCF4A2B9AA54C00202087 /* ServersFriendUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 376FCF492B9AA54C00202087 /* ServersFriendUITestsLaunchTests.swift */; };
 		37B26D2A2BD8931A0025309C /* EditShiftTypeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37B26D292BD8931A0025309C /* EditShiftTypeView.swift */; };
 		37B26D2D2BD8AB640025309C /* EditShiftTypeVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37B26D2C2BD8AB640025309C /* EditShiftTypeVM.swift */; };
+		37C949092BD9812C00F3F22C /* NewTipView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37C949082BD9812C00F3F22C /* NewTipView.swift */; };
 		37F3C2982BD212020061FA19 /* ShiftEnvironment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37F3C2972BD212020061FA19 /* ShiftEnvironment.swift */; };
 		37F3C2D82BD5D7B30061FA19 /* CalendarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37F3C2D72BD5D7B30061FA19 /* CalendarView.swift */; };
 		37F3C2DA2BD5D8280061FA19 /* ShiftsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37F3C2D92BD5D8280061FA19 /* ShiftsView.swift */; };
@@ -73,6 +75,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		3723ADE52BD97CCE001319E0 /* ServerOverviewVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServerOverviewVM.swift; sourceTree = "<group>"; };
 		37287CDF2BC8FCED003AC41C /* OldSettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OldSettingsView.swift; sourceTree = "<group>"; };
 		37287CE12BC8FD40003AC41C /* SettingsViewVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewVM.swift; sourceTree = "<group>"; };
 		37287CE42BC9A6D1003AC41C /* CheckBoxStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckBoxStyle.swift; sourceTree = "<group>"; };
@@ -112,6 +115,7 @@
 		376FCF492B9AA54C00202087 /* ServersFriendUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServersFriendUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		37B26D292BD8931A0025309C /* EditShiftTypeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditShiftTypeView.swift; sourceTree = "<group>"; };
 		37B26D2C2BD8AB640025309C /* EditShiftTypeVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditShiftTypeVM.swift; sourceTree = "<group>"; };
+		37C949082BD9812C00F3F22C /* NewTipView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewTipView.swift; sourceTree = "<group>"; };
 		37F3C2972BD212020061FA19 /* ShiftEnvironment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShiftEnvironment.swift; sourceTree = "<group>"; };
 		37F3C2D72BD5D7B30061FA19 /* CalendarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarView.swift; sourceTree = "<group>"; };
 		37F3C2D92BD5D8280061FA19 /* ShiftsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShiftsView.swift; sourceTree = "<group>"; };
@@ -167,7 +171,6 @@
 				376896D52BB40C9A00F7CF66 /* NewTipEntryView.swift */,
 				376896D72BB417C300F7CF66 /* ProfileView.swift */,
 				37287CDF2BC8FCED003AC41C /* OldSettingsView.swift */,
-				37287CEB2BCD27EE003AC41C /* ShiftRowView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -289,6 +292,7 @@
 		379EABE12BD6F16900BDFF77 /* ShiftsView_subviews */ = {
 			isa = PBXGroup;
 			children = (
+				37287CEB2BCD27EE003AC41C /* ShiftRowView.swift */,
 				376896E12BB5E15300F7CF66 /* NewShiftTypeView.swift */,
 				37B26D292BD8931A0025309C /* EditShiftTypeView.swift */,
 			);
@@ -301,6 +305,14 @@
 				37B26D2C2BD8AB640025309C /* EditShiftTypeVM.swift */,
 			);
 			path = "View Models";
+			sourceTree = "<group>";
+		};
+		37C949072BD9810100F3F22C /* ServerOverview_subviews */ = {
+			isa = PBXGroup;
+			children = (
+				37C949082BD9812C00F3F22C /* NewTipView.swift */,
+			);
+			path = ServerOverview_subviews;
 			sourceTree = "<group>";
 		};
 		37F3C2962BD211D40061FA19 /* Environment */ = {
@@ -336,6 +348,7 @@
 		37F3C2D62BD5D5BA0061FA19 /* SubViews */ = {
 			isa = PBXGroup;
 			children = (
+				37C949072BD9810100F3F22C /* ServerOverview_subviews */,
 				37B26D2B2BD8AA3D0025309C /* View Models */,
 				379EABE12BD6F16900BDFF77 /* ShiftsView_subviews */,
 			);
@@ -355,6 +368,7 @@
 			isa = PBXGroup;
 			children = (
 				37F3C2DF2BD5E62A0061FA19 /* ShiftsViewVM.swift */,
+				3723ADE52BD97CCE001319E0 /* ServerOverviewVM.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -505,6 +519,7 @@
 				37F3C2982BD212020061FA19 /* ShiftEnvironment.swift in Sources */,
 				376896E62BB5ED1500F7CF66 /* Outlets.swift in Sources */,
 				376896C02BB3D0E000F7CF66 /* RegisterViewVM.swift in Sources */,
+				37C949092BD9812C00F3F22C /* NewTipView.swift in Sources */,
 				376896BA2BB3CEAA00F7CF66 /* RegisterView.swift in Sources */,
 				376FCF2F2B9AA54A00202087 /* MainView.swift in Sources */,
 				376896D42BB4048A00F7CF66 /* AddButton.swift in Sources */,
@@ -535,6 +550,7 @@
 				376896CE2BB3E5F500F7CF66 /* Utils.swift in Sources */,
 				376896D22BB3F6BA00F7CF66 /* Extensions.swift in Sources */,
 				376896DE2BB4BC5D00F7CF66 /* Employer.swift in Sources */,
+				3723ADE62BD97CCE001319E0 /* ServerOverviewVM.swift in Sources */,
 				376896DA2BB4B7A600F7CF66 /* ProfileViewVM.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
